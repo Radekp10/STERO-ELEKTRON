@@ -1,0 +1,12 @@
+<package>
+<name>stero_mobile_init</name>
+<version>1.2.4</version>
+<description>RadekTeam</description>
+<maintainer email="radekteam@gmail.com"> RadekTeam </maintainer>
+<license>BSD</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>elektron</run_depend>
+
+  <build_depend>message_generation</build_depend>
+<run_depend>message_runtime</run_depend>
+</package>

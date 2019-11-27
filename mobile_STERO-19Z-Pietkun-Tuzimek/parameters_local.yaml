@@ -1,0 +1,21 @@
+plugins:
+    - {name: obstacle_map,    type: "costmap_2d::VoxelLayer"}
+    - {name: inflation_map,    type: "costmap_2d::InflationLayer"}
+obstacle_range: 2.5
+raytrace_range: 3.0
+footprint: [[0.3, 0.2], [0.3, -0.2], [-0.3, -0.2], [-0.3, 0.2]]
+inflation_radius: 0.55
+obstacle_map:
+    observation_sources: laser_scan_sensor
+    laser_scan_sensor: {sensor_frame: base_laser_link, data_type: LaserScan, topic: laser_scan, marking: true, clearing: true, observation_persistence: 0.2, expected_update_rate: 0.1}
+
+global_frame: odom
+robot_base_frame: base_link
+update_frequency: 5.0
+publish_frequency: 2.0
+static_map: false
+rolling_window: true
+width: 6.0
+height: 6.0
+resolution: 0.05
+always_send_full_costmap: true
